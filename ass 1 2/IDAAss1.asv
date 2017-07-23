@@ -1,0 +1,20 @@
+clc
+x=10
+data = load('hw1.txt')
+[rows,column] = size(data);
+data(:,5)=0;
+%data
+for i=1:rows
+    for j=2:column
+        data(i,5)=data(i,5)+data(i,j);
+    end
+end
+data
+minimum = min(data(:,5))
+maximum = max(data(:,5))
+grades=discretize(data(1,5),minimum,maximum);
+
+
+for i=1:rows
+    grades(i,1)=data(i,5)+data(i,j);
+end
